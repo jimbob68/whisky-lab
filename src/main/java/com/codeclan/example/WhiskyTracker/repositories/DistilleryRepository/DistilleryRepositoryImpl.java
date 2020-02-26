@@ -7,13 +7,14 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.util.List;
 
 public class DistilleryRepositoryImpl implements DistilleryRepositoryCustom {
 
     @Autowired
     EntityManager entitymanager;
-
+    @Transactional
     public List<Distillery> findAllDistilleriesInAParticularArea(String region){
       List<Distillery> result = null;
       Session session = entitymanager.unwrap(Session.class);

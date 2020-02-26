@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface WhiskyRepositoryCustom {
     public List<Whisky> findWhiskyByYear(int year);
+    public List<Whisky> findWhiskyByDistilleryAndAge(int age, String name);
 }
