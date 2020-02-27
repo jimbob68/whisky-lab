@@ -26,4 +26,9 @@ public class WhiskyController {
     public List<Whisky> findWhiskyByDistilleryAndAge(@RequestParam int age, @RequestParam String name){
         return whiskyRepository.findWhiskyByDistilleryAndAge(age, name);
     }
+//    @GetMapping(value = "/findAllWhiskiesByRegion")
+//    public List<Whisky> findAllWhiskiesByRegion(@RequestParam String name, @RequestParam String region){
+//        return whiskyRepository.findAllWhiskiesByRegion(name, region);
+//    }
+
 }
